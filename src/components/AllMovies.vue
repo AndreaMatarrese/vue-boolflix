@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <!-- <div class="all row row-cols-4"> -->
     <ul>
       <li>{{movie.title}}</li>
       <li>{{movie.original_title}}</li>
       <li>{{movie.original_language}}</li>
       <li>{{movie.vote_average}}</li>
     </ul>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -19,5 +19,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+ul{
+  color: white;
+}
 </style>

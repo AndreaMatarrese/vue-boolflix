@@ -1,8 +1,10 @@
 <template>
-    <div class="container-fluid">
-      <all-movies v-for="allmovie in arrMovies"
+    <div class="container-fluid main-div">
+      <div class="list">
+        <all-movies v-for="allmovie in arrMovies"
         :key="allmovie.id"
         :movie="allmovie"></all-movies>
+      </div>
   </div>
 </template>
 
@@ -17,12 +19,12 @@ export default {
   name: 'MainPage',
   data() {
     return {
-      apiUrl: 'https://api.themoviedb.org/3/search/movie?api_key=26c9b6b928e136a4909604d120f23340&query=mercoledi&language=it-IT',
+      apiUrl: 'https://api.themoviedb.org/3/search/movie?api_key=26c9b6b928e136a4909604d120f23340&query=mercoledi',
       arrMovies: null,
     };
   },
   created() {
-    axios.get(this.urlApi)
+    axios.get(this.apiUrl)
       .then((axiosResponse) => {
         this.arrMovies = axiosResponse.data.results;
       });
@@ -31,5 +33,8 @@ export default {
 </script>
 
 <style lang="scss">
-
+.main-div{
+  height: 100vh;
+  background-color: #212121;
+}
 </style>
