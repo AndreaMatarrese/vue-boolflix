@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header-page></header-page>
+    <header-page @keyWord="sendKey"></header-page>
     <main-page></main-page>
   </div>
 </template>
@@ -14,6 +14,11 @@ export default {
   components: {
     HeaderPage,
     MainPage,
+  },
+  methods: {
+    sendKey() {
+
+    },
   },
 };
 </script>
